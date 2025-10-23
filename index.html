@@ -128,7 +128,7 @@
   </section>
 
   <script>
-    // --- Quadratic Solver ---
+    // enables the user to give numeric inputs
     function solveQuadratic() {
       const a = parseFloat(document.getElementById('a').value);
       const b = parseFloat(document.getElementById('b').value);
@@ -142,7 +142,7 @@
       aErr.textContent = bErr.textContent = cErr.textContent = "";
       resultDiv.textContent = "";
 
-      // Validation
+      // Validation for quadratic functions incase a user inputs a value that is not allowed by the system
       let valid = true;
       if (isNaN(a)) { aErr.textContent = "Please enter a valid number for a."; valid = false; }
       if (isNaN(b)) { bErr.textContent = "Please enter a valid number for b."; valid = false; }
@@ -208,7 +208,7 @@
         return;
       }
 
-      // Determine grade
+      // Determine grade for the students
       let grade;
       if (score >= 85) grade = "A+";
       else if (score >= 75) grade = "A" ;
@@ -230,4 +230,5 @@
   </script>
 </body>
 </html>
+
 
